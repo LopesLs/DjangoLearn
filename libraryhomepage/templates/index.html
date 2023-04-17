@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.11.3/datatables.min.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/b-2.0.1/b-html5-2.0.1/b-print-2.0.1/datatables.min.css"/>
+        <link rel="icon" href="img/biblioteca.png">
+        <title>Biblioteca</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-primary navbar-expand-lg h5">
+          <div class="container">
+            <a class="navbar-brand" href="{% url 'homepage'%}">Biblioteca</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="{% url 'bookpage'%}"><i class="bi bi-book"></i> Livros</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="container my-5 c">
+            <div class="page-header text-center py-3">
+                <h1>Livros</h1>
+                <hr>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="card" style="width: 18rem;">
+                        <a href="{% url 'bookpage' %}">
+                        <img src="{% static 'img/a_moreninha.jpg'%}" class="card-img-top" alt="...">
+                        </a>
+                        <div class="card-body">
+                            <a href="{% url 'bookpage' %}" class="text-decoration-none text-reset"><h5 class="card-title">A Moreninha</h5></a>
+                            <p>Autor: </p>
+                            <p class="card-text">Joaquim Manoel de Macedo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer class="pt-4">
+            <!-- Copyright -->
+            <div class="text-center py-3">
+                <p class="text-white">© Copyright Biblioteca - 2022</p>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+        <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.11.3/datatables.min.js"></script>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/b-2.0.1/b-html5-2.0.1/b-print-2.0.1/datatables.min.js"></script>
+    </body>
+</html>
